@@ -8,19 +8,19 @@ Follow the instructions for each of the following code samples in [Compliler Exp
 
 1. [printf](https://godbolt.org/z/y2YKew)
    1. What is the library function that is called?
-      <stdio.h> 
+      **<stdio.h>** 
    2. Research the implementation (source code) of this function.
-      The source code includesmany different default instructions.
+      **The source code includesmany different default instructions.**
    3. Find out if the program directly executes the output operation or it makes a *system call* to the operating system.
       Program does not make a system call. 
 2. [malloc](https://godbolt.org/z/kAZX7x)
    1. How are the arguments passed to `malloc` and `free`?
-      They are being passed as branches.
+      **They are being passed as branches.**
    2. Research the implementation (source code) of `malloc` and `free`.
-   
+      **The source code acts as its own program allowing varoius implementations of code**
 3. [malloc array](https://godbolt.org/z/bBl0zx)
    1. How does this case differ from the previous one?
-      This case differs by creating an array that is 100 * the integer being passed through the program. Additionally, it uses the stdlib instead of stdio.
+      **This case differs by creating an array that is 100 * the integer being passed through the program**
    2. [**hard**] Write your own tiny `malloc` library by declaring a large `FILL` area and writing a `malloc` and a `free` subroutines that manage allocations to that memory area. 
       1. `malloc` works approximately as follows:
          - it takes as argument the number of bytes requested
@@ -81,7 +81,7 @@ Follow the instructions for each of the following code samples in [Compliler Exp
 5. [2d array](https://godbolt.org/z/Kr-Sn8)
    1. Port this code to VisUAL.
    2. How are nested `for` loops handled in assembly? Are they *"nested"* in assembly?
-   
+      **Nested loops are handled by utilizing branch commands. If a condition is met, then we may branch to a specific location in assembly. For example, we can continue to allow a code to execute by branching to a differnet locatoin unless the condition is met. This means the code will only move past the branch once the condition is met, and we can make the condition anything we want.**
 6. [2d array with mul](https://godbolt.org/z/cHwSTR)
    1. Port this code to VisUAL. (It's the same as the previous but with multiplicatoin).
    2. Add your 32-bit unsigned integer multiplication algorithm as a subroutine and run the code. Verify its correctness.
